@@ -10,7 +10,7 @@ class DatamatrixGenerator:
         try:
             datamatrix = encode(text.encode('utf-8'))
 
-            img = Image.frombytes('RGB', (datamatrix.width, datamatrix.height), datamatrix.pixels)
+            img = Image.frombytes('RGB', (15, 15), datamatrix.pixels)
 
             path = f"{self.output_directory}/{name_file}" if self.output_directory else name_file
 
