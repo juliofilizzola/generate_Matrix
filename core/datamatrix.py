@@ -1,4 +1,5 @@
 from pylibdmtx.pylibdmtx import encode
+from errors import ErrorHandler
 from PIL import Image
 
 
@@ -16,6 +17,7 @@ class DatamatrixGenerator:
             print(f"DataMatrix successfully generated and saved at: {file_path}")
         except Exception as e:
             print(f"Error generating DataMatrix: {e}")
+            ErrorHandler.handle_error(e, "Error generating DataMatrix")
 
     @staticmethod
     def _create_data_matrix_image(text: str) -> Image:
@@ -26,4 +28,4 @@ class DatamatrixGenerator:
         return Image.frombytes('RGB', (encoded_data_matrix.width, encoded_data_matrix.height), encoded_data_matrix.pixels)
 
     def _get_file_path(self, file_name: str) -> str:
-        return f"{self.output_directory}/{file_name}" if self.output_directory else file_name
+        return f"{self.output_directory}/{file_name}.png" if self.output_directory else f"{file_name}.png"

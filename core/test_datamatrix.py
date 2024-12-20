@@ -2,7 +2,7 @@ import os
 import pytest
 from pylibdmtx.pylibdmtx import decode
 from PIL import Image
-from datamatrix import DatamatrixGenerator
+from core.datamatrix import DatamatrixGenerator
 
 
 @pytest.fixture
