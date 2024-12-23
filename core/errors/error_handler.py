@@ -7,7 +7,7 @@ logging.basicConfig(
 )
 
 
-class ErrorHandler:
+class ErrorHandlerCustom:
 
     @staticmethod
     def handle_error(e, custom_message=None):
@@ -35,4 +35,4 @@ def execute_with_error_handling(function, *args, **kwargs):
     try:
         return function(*args, **kwargs)
     except Exception as err:
-        ErrorHandler.handle_error(err, "Um erro ocorreu ao executar a função")
+        ErrorHandlerCustom.handle_error(err, "Um erro ocorreu ao executar a função")
