@@ -1,5 +1,5 @@
 import pytest
-from core.errors.error_handler import ErrorHandlerCustom
+from errors.error_handler import ErrorHandlerCustom
 import logging
 def test_handle_error_with_custom_message(caplog):
     with caplog.at_level(logging.ERROR):
