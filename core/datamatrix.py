@@ -1,6 +1,5 @@
 from pylibdmtx.pylibdmtx import encode
-from core.errors.error_handler import execute_with_error_handling
-
+from errors.error_handler import execute_with_error_handling
 from PIL import Image
 
 
