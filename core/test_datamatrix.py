@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 from PIL import Image
 
-from core.datamatrix import DatamatrixGenerator
+from datamatrix import DatamatrixGenerator
 
 
 @pytest.fixture
@@ -21,7 +21,7 @@ def test_get_file_path(datamatrix_generator):
     assert path == "test_file.png"
 
 
-@patch("your_module.encode")
+@patch("datamatrix.encode")
 def test_create_data_matrix_image(mock_encode, datamatrix_generator):
 
     mock_encoded_data = MagicMock()
@@ -40,8 +40,8 @@ def test_create_data_matrix_image(mock_encode, datamatrix_generator):
         datamatrix_generator._create_data_matrix_image("")
 
 
-@patch("your_module.Image.Image.save")
-@patch("your_module.DatamatrixGenerator._create_data_matrix_image")
+@patch("datamatrix.Image.Image.save")
+@patch("datamatrix.DatamatrixGenerator._create_data_matrix_image")
 def test_generate(mock_create_image, mock_save, datamatrix_generator):
     mock_image = MagicMock()
     mock_create_image.return_value = mock_image
