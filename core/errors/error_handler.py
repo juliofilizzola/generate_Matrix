@@ -23,16 +23,3 @@ class ErrorHandlerCustom:
 
         print(error_message)
         logging.error(error_message)
-
-def execute_with_error_handling(function, *args, **kwargs):
-    """
-    Executa uma função com tratamento genérico de exceções.
-
-    :param function: Função a ser executada.
-    :param args: Argumentos posicionais da função.
-    :param kwargs: Argumentos nomeados (keyword arguments) da função.
-    """
-    try:
-        return function(*args, **kwargs)
-    except Exception as err:
-        ErrorHandlerCustom.handle_error(err, "Um erro ocorreu ao executar a função")
