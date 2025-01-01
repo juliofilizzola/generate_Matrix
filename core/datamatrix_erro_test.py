@@ -1,7 +1,7 @@
 import pytest
 import pytest_mock
 from unittest.mock import ANY
-from datamatrix import DatamatrixGenerator
+from core.datamatrix import DatamatrixGenerator
 from errors.error_handler import ErrorHandlerCustom
 
 def test_generate_handles_error(mocker):

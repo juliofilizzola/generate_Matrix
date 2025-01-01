@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 from PIL import Image
 import os
-from datamatrix import DatamatrixGenerator
+from core.datamatrix import DatamatrixGenerator
 
 
 @pytest.fixture
