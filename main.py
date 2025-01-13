@@ -2,6 +2,9 @@ from core.datamatrix import DatamatrixGenerator
 from input.getTerminalInput import get_terminal_input
 from input.input import print_name_terminal
 
+import warnings
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 def main():
     print_name_terminal("DataMatrix")

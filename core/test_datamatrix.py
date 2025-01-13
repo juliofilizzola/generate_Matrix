@@ -3,6 +3,9 @@ from unittest.mock import patch, MagicMock
 from PIL import Image
 import os
 from datamatrix import DatamatrixGenerator
+import warnings
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 @pytest.fixture
