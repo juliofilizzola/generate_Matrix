@@ -50,3 +50,8 @@ def test_generate_success(datamatrix_generator):
     assert image.format == "PNG"
     image.close()
     os.remove("test.png")
+
+def test_generate_with_error(datamatrix_generator):
+    with patch.object(datamatrix_generator, "_create_data_matrix_image", side_effect=Exception("Simulated Error")):
+        with pytest.raises(ValueError, match="Validation Error: Simulated Error"):
+            datamatrix_generator.generate("Test text", "test_file")
