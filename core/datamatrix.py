@@ -1,6 +1,5 @@
 from pylibdmtx.pylibdmtx import encode
 
-from errors.error_handler import ErrorHandlerCustom
 from PIL import Image
 
 
@@ -12,12 +11,12 @@ class DatamatrixGenerator:
     def generate(self, text, file_name) -> None:
         try:
             image = self._create_data_matrix_image(text)
-            print(f"Generating DataMatrix for: {text}")
+            print(f"Generating DataMatrix for: {file_name}")
             file_path = self._get_file_path(file_name)
             image.save(file_path)
             print(f"DataMatrix successfully generated and saved at: {file_path}")
         except Exception as e:
-            ErrorHandlerCustom.handle_error(e, "Error generating DataMatrix")
+            raise ValueError(f"Validation Error: {e}")
 
     @staticmethod
     def _create_data_matrix_image(text: str) -> Image:
