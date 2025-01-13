@@ -16,7 +16,7 @@ class DatamatrixGenerator:
             image.save(file_path)
             print(f"DataMatrix successfully generated and saved at: {file_path}")
         except Exception as e:
-            print(f"Validation Error: {e}")
+            raise ValueError(f"Validation Error: {e}")
 
     @staticmethod
     def _create_data_matrix_image(text: str) -> Image:
