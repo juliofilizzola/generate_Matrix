@@ -26,7 +26,7 @@ This project is a DataMatrix generator written in Python. It allows you to gener
 
 2. Create a virtual environment and activate it:
     ```sh
-    python -m venv venv
+    python3 -m venv venv
     source venv/bin/activate
     ```
 
@@ -39,7 +39,7 @@ This project is a DataMatrix generator written in Python. It allows you to gener
 
 1. Run the main script:
     ```sh
-    python main.py
+    python3 main.py
     ```
 
 2. Follow the prompts to enter the file name and the message for the DataMatrix.
