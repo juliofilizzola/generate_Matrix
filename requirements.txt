@@ -1,3 +1,4 @@
+altgraph==0.17.4
 annotated-types==0.7.0
 colorama==0.4.6
 contourpy==1.3.1
@@ -14,6 +15,8 @@ pluggy==1.5.0
 pydantic==2.10.3
 pydantic_core==2.27.1
 pyfiglet==1.0.2
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2024.11
 pylibdmtx==0.1.10
 pyparsing==3.2.0
 pytest==8.3.4
