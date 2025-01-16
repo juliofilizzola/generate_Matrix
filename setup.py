@@ -7,12 +7,12 @@ setup(
     name='datamatrix_lib',
     version='0.1',
     author='Julio Filizzola',
+    author_email='julio.filizzola@gmail.com',
     packages=find_packages(),
     description='Lib de geração de qrcode datamatrix',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     package=find_packages(),
-    author_email='julio.filizzola@gmail.com',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
